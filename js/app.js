@@ -294,7 +294,7 @@ function crearDB() {
   crearDB.onupgradeneeded = function (e) {
     const db = e.target.result;
 
-    const objectStore = db.objectStore('citas', {
+    const objectStore = db.createObjectStore('citas', {
       keyPath: 'id',
       autoincrement: true,
     });
